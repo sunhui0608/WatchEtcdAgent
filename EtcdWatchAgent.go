@@ -276,7 +276,7 @@ func main() {
 		return
 	}
 	//fmt.Printf("endpoint %s : prefix %s : path %s\n", *endPoint, *prefix, *storePath)
-	getAllKeyValue([]string{*endPoint}, *prefix, *storePath)
-	watchWithPrefix([]string{*endPoint}, *prefix, *storePath)
+	getAllKeyValue(strings.Split(*endPoint,","), *prefix, *storePath)
+	watchWithPrefix(strings.Split(*endPoint,","), *prefix, *storePath)
 
 }
